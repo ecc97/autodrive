@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(../img/background_04.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    min-height: 100vh;
+}
+
+h1, h2  {
+    padding: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contenedor {
+    width: 80%;
+    margin: auto;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador input {
+    width: 30%;
+    padding: 10px 5px;
+    border: #dddddd solid thin;
+    border-radius: 5px;
+    outline: none;
+}
+
+.buscador button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #1481f7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.listado-autos{
+    padding: 0 1rem;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 30px;    
+}
+
+#resultado {
+    text-align: center;
+    padding: 30px 0;
+}
+
+#resultado li {
+    padding: 5px;
+}
+
+.listado-resultados{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.listado--card{
+    border: 1px solid gray;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    list-style: none;
+    transition: .3s;
+}
+
+.listado--card:hover {
+    box-shadow: 10px 10px 20px #989898, -10px -10px 20px #ffffff;
+    transform: scale(103%);
+    transition: .3s;
+}

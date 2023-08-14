@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AutoDriveX - Precios</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+          <img class="img__logo" src="img/logo.svg" alt="AutoDriveX">
+          AutoDriveX
+      </a>
+      <nav class="menu">
+          <ul class="menu-list">
+              <li class="menu-list__item"><a href="index.html" id="e-home">Home</a></li>
+              <li class="menu-list__item"><a href="index.html#feauture" id="e-feature">Características</a></li>
+              <li class="menu-list__item"><a href="#/Precio">Precio</a></li>
+              <li class="menu-list__item"><a href="index.html#contact" id="e-contact">Contacto</a></li>
+              <li class="menu-list__item"><a class="reserva-cita" href="#">Reservar Cita</a></li>
+          </ul>
+      </nav>
+  </header>
+        <h1>Busca los autos y precios disponibles</h1>
+
+        <div class="contenedor">
+            <form class="buscador" id="buscador">
+                <input type="search" name="search" placeholder="Buscar por marca, modelo, año, precio" id="search">
+                <button type="submit">Buscar</button>
+            </form>
+            <h2>Listado de productos</h2>
+            <div class="listado-autos">
+              <ul id="resultado" class="listado-resultados"></ul>
+            </div>
+         </div>
+  <footer class="footer-wrapper">
+    <div class="footer">
+      <section class="footer__widget">
+        <h3 class="footer__widget-titulo">Nuestra Ubicación</h3>
+        <p class="footer__widget-texto">123 Calle Principal, Barrio Ciudad, País 12345</p>
+      </section>
+      <section class="footer__widget">
+        <h3 class="footer__widget-titulo">Teléfono</h3>
+        <p class="footer__widget-texto">+57 123 456 7890</p>
+      </section>
+      <section class="footer__widget">
+        <h3 class="footer__widget-titulo">Email</h3>
+        <p class="footer__widget-texto">autodrivex@vallecarsalas.com.co</p>
+      </section>
+    </div>
+  </footer>
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+</html>

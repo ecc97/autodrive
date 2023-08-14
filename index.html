@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDriveX</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <!--Contenido General-->
+    <main class="container">
+        <!--Cabecera-->
+        <header class="header">
+            <a href="#" class="logo">
+                <img class="img__logo" src="img/logo.svg" alt="AutoDriveX">
+                AutoDriveX
+            </a>
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list__item"><a href="#Home" id="e-home">Home</a></li>
+                    <li class="menu-list__item"><a href="#/Caracteristicas" id="e-feature">Características</a></li>
+                    <li class="menu-list__item"><a href="precio.html">Precio</a></li>
+                    <li class="menu-list__item"><a href="#/Contacto" id="e-contact">Contacto</a></li>
+                    <li class="menu-list__item"><a class="reserva-cita" href="#" id="e-reserv">Reservar Cita</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--slides-->
+        <div class="botones-slides">
+            <a class="slideButton prevSlide"><i class="fa fa-left-long"></i></a>
+            <a class="slideButton nextSlide"><i class="fa fa-right-long"></i></a>
+        </div>
+        <!--Contenido-->
+        <article id="home" class="content contenido activo">
+            <h1 class="content__claim">Reparaciones de tu Automóvil</h1>
+            <h2 class="content__subclaim">Visítanos para tu Servicio</h2>
+            <a class="reserva-cita" href="#">Reservar Cita</a>
+        </article>
+        <article id="feature" class="features contenido">
+            <div class="caracteristicas">
+                <h2 class="crct__titulo">Características</h2>
+                <p class="crct__descripcion">Características de mecánica y reparaciones de AutoDriveX:</p>
+                <ul class="crct__item">
+                    <li class="crct__items"><strong>Diseño modular:</strong> AutoDriveX cuenta con un diseño modular que facilita el acceso y reemplazo de componentes. Esto permite un mantenimiento más eficiente y reducción de tiempo en las reparaciones, ya que los módulos se pueden desmontar y reemplazar de forma independiente.</li>
+                    <li class="crct__items"><strong>Autodiagnóstico:</strong> El sistema de autodiagnóstico de AutoDriveX es capaz de identificar y registrar posibles problemas en tiempo real. Utilizando sensores y algoritmos inteligentes, el vehículo puede detectar anomalías en los sistemas mecánicos y eléctricos, lo que agiliza el proceso de diagnóstico y facilita la solución de problemas.</li>
+                    <li class="crct__items"><strong>Asistencia remota:</strong> AutoDriveX cuenta con una función de asistencia remota que permite a los técnicos de servicio conectarse con el vehículo de forma remota. Esto les permite realizar diagnósticos y resolver problemas sin necesidad de llevar el vehículo al taller, lo que ahorra tiempo y reduce costos innecesarios.</li>
+                </ul>
+            </div>
+        </article>
+        <article id="contact" class="contact contenido">
+            <h3 class="content__minititle">Contacto AutoDriveX</h3>
+            <div class="form-container">
+                <form action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa su nombre" required>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa su correo electrónico" required>
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ingresa su número de teléfono" required>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escriba su mensaje" required></textarea>
+                    <button type="submit">Enviar</button>  
+                </form>
+            </div>
+        </article>
+        <!--Pie-->
+        <footer class="footer-wrapper">
+            <div class="footer">
+                <section class="footer__widget">
+                    <h3 class="footer__widget-titulo">Nuestra Ubicación</h3>
+                    <p class="footer__widget-texto">123 Calle Principal, Barrio Ciudad, País 12345</p>
+                </section>
+                <section class="footer__widget">
+                    <h3 class="footer__widget-titulo">Teléfono</h3>
+                    <p class="footer__widget-texto">+57 123 456 7890</p>
+                </section>
+                <section class="footer__widget">
+                    <h3 class="footer__widget-titulo">Email</h3>
+                    <p class="footer__widget-texto">autodrivex@vallecarsalas.com.co</p>
+                </section>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>

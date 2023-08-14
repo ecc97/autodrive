@@ -1,0 +1,293 @@
+/* General */
+:root{
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #00C2FF;
+    --color-fondo: white;
+}
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.reserva-cita{
+    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    font-size: 24px;
+}
+/*Contenedor*/
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url('../img/background_01.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.7s ease-in-out;
+}
+.header, .content, .features, .contact, .footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: var(--max-width);
+}
+/*Cabecera*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 42px;
+    font-weight: bold;
+}
+.logo .img__logo{
+    margin-right: .5rem;
+}
+
+.menu-list{
+    margin: 0;
+}
+
+.menu-list__item{
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 24px;
+}
+
+.menu-list__item:last-child{
+    margin-right: 0;
+}
+/*slider*/
+.botones-slides{
+    width: 100%;
+    z-index: 0;
+}
+/*Contenido*/
+.content{
+    padding: 2rem;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.slideButton{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    cursor: pointer;
+}
+.prevSlide{
+    left: 0;
+}
+.nextSlide{
+    right: 0;
+}
+.content__claim{
+    font-size: 64px;
+    color: var(--accent-color);
+    margin: 0;
+}
+.content__subclaim{
+    font-size: 36px;
+    margin: .5rem 0;
+    margin-bottom: 2rem;
+}
+.features{
+    display: none;
+    color: black;
+    flex-grow: 1;
+    max-width: 940px;
+}
+.caracteristicas{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fondo);
+    opacity: .9;
+    height: 330px;
+    margin-top: 1rem;
+    padding: 1.15rem;
+    align-items: center;
+    gap: .3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 black;
+}
+.crct__titulo{
+    display: flex;
+    margin: 0;
+}
+.crct__descripcion{
+    font-style: italic;
+    margin: 0;
+}
+.crct__item{
+    display: flex;
+    gap: .5rem;
+    padding: 0;
+}
+.crct__items{
+    list-style: none;
+    padding: 1rem;
+    --border-size: 1px;
+    --border-angle: 0turn;
+    background-image: conic-gradient(from var(--border-angle), white, white 50%, white), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-animation: bg-spin 3s linear infinite;
+    animation: bg-spin 3s linear infinite;
+    transition: .7s ease;
+}
+@-webkit-keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+  .crct__items:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    background-image: conic-gradient(from var(--border-angle), var(--accent-color), var(--accent-color) 50%, var(--accent-color)), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    color: white;
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+.contact{
+    display: none;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    flex-grow: 1;
+    max-width: 990px;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    border-radius: 20px;
+    opacity: .9;
+}
+.content__minititle{
+    text-align: center;
+}
+.form-container {
+    background-color: #ffffff;
+    color: black;
+    min-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container label, .form-container input, .form-container textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.form-container input, .form-container textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+}
+.form-container button {
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #555555;
+}
+/*Contenidos show-hidden*/
+.contenido {
+    display: none;
+  }
+  
+  .contenido.activo {
+    display: flex;
+  }
+/*Footer*/
+.footer-wrapper{
+    background-color: black;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__widget{
+    font-size: 24px;
+}
+.footer__widget-titulo{
+    color: var(--accent-color);
+    margin: 0 0 1rem 0;
+}
+.footer__widget-texto{
+    margin: 0;
+}
+/* Apartado Responsive */
+@media screen and (max-width: 1280px) {
+    .header, .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu{
+        margin-top: 1.5rem;
+    }
+    .content{
+        align-items: center;
+    }
+    .caracteristicas{
+        height: auto;
+        margin-top: 0;
+    }
+    .crct__descripcion{
+        display: none;
+    }
+    .crct__item{
+        flex-wrap: wrap;
+    }
+    .contact{
+        max-width: 500px;
+        margin-bottom: 4rem;
+    }
+    .form-container{
+        min-width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    .form-container>form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-container button{
+        width: 100%;
+    }
+    .footer__widget{
+        margin-bottom: 1rem;
+    }
+}
